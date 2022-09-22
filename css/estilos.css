@@ -15,9 +15,6 @@
     background-size: cover;
 }
 
-.container__principal__img__logo{
-    width: 15%;
-}
 
 .container{
     height: 100vh;
@@ -30,7 +27,7 @@
     grid-template-rows: auto 1fr auto;
 }
 
-.container__principal{
+.hraderUniversal{
    background-color: black;
    width: 100%;
    grid-area: container__principal;
@@ -39,19 +36,41 @@
    justify-content: space-between;
 }
 
-.container__principal__nav{
+
+.logo{
+    width: 15%;
+    transition: width 0.5s;
+}
+
+.logo:hover{
+    width: 18%;
+}
+
+.navegador{
     width: 50%;
     display: flex;
     justify-content: space-evenly;
     padding: 1%;
 }
 
-.container__principal__nav__a{
+.link{
     color: white;
+    transition: color 0.5s, font-size 0.5s ;   
 }
 
-.container__principal__nav__a:hover{
-    color: tomato;
+.link:hover{
+    color: skyblue;
+    font-size: 1.3rem;
+    text-shadow:
+    0 0 5px rgba(0,178,255,1),
+    0 0 10px rgba(0,178,255,1),
+    0 0 20px rgba(0,178,255,1),
+    0 0 40px rgba(38,104,127,1),
+    0 0 80px rgba(38,104,127,1),
+    0 0 90px rgba(38,104,127,1),
+    0 0 100px rgba(38,104,127,1),
+    0 0 140px rgba(38,104,127,1),
+    0 0 180px rgba(38,104,127,1);
 }
 
 .container__importante{
@@ -83,6 +102,9 @@
 
 .bodyContacto{
     height: 100vh;
+    background-image: url(../imagenes/consola.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contenedor{
@@ -93,14 +115,10 @@
     "contenedor__header contenedor__header"
     "contenedor__contacto contenedor__formulario"
     "footer footer";
-    grid-template-rows: auto 2fr auto;
-    grid-template-columns: auto 50%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 40%;
 }
 
-.contenedor__header__img__logo{
-    width: 15%;
-   
-}
 
 .contenedor__header{
     background-color: black;
@@ -118,29 +136,37 @@
     padding: 1%;
 }
 
-.contenedor__header__nav__a{
-    color: white;
-}
-
-.contenedor__header__nav__a:hover{
-    color: tomato;
-}
-
 .contenedor__contacto{
-    padding-left: 3%;
-    padding-top: 3rem;
+    height: 100vh;
+    padding: 10%;
     display: flex;
     flex-direction: column;
     align-items: flex-start ;
 }
 
+.titulo{
+    color: white;
+    font-size: 3em;
+    padding-bottom: 20px;
+}
+
+.parrafo{
+    color: white;
+    font-size: 1.5em;
+}
+
+label{
+    color: white;
+}
+
 .contenedor__formulario{
+    height: 100vh;
     grid-area: contenedor__formulario;
     
 }
 
 .contenedor__formulario__from{
-    height: 100%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,15 +175,255 @@
 
 .contenedor__formulario__from__in{
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.transparencia{
+    color: white;
+    background-color: black;
+    opacity:0.5;
+ }
+ 
+ .botonContacto{
+    border-radius: 5px;
+ }
+
+/*estilos biografia*/
+
+.inicioBiografia{
+    height: 100vh;
+    width: 100vw;
+}
+
+.contenidoBiografia{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+    "contenido__principal contenido__principal"
+    "informacion imagen"
+    "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 50% 50%;
+}
+
+.contenido__principal{
+   background-color: black;
+   width: 100%;
+   grid-area: contenido__principal;
+   display: flex;
+   justify-content: space-between;
+}
+
+.contenido__principal__nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+.contenido__principal__nav__a{
+    color
+}
+
+.informacion{
+    grid-area: informacion;
+}
+
+.lectura{
+    font-size: 1rem;
+    color: black;
+}
+
+.bio{
+    color: black;
+}
+
+.masInfo{
+    color: rgb(1, 5, 65);
+    text-decoration:underline;
+    padding-top: 1%;
+}
+
+.informacion__bio{
+    height: 95%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start ;
+}
+
+.imagen{
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen__har{
+    height: 80%;
+}
+
+/*estilos discografia*/
+
+.containerDiscografia{
+    /*background:linear-gradient(to top, rgba(37, 37, 37, 0.7),rgb(0, 0, 0, 0.8) ) ;*/
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+    "containerDiscografia__header"
+    "containerDiscografia__banner"
+    "containerDiscografia__discos"
+    "footer";
+    grid-template-rows: auto auto auto auto;
+}
+ 
+.containerDiscografia__header{
+    grid-area: containerDiscografia__header;
+}
+
+.containerDiscografia__banner{
+    grid-area: containerDiscografia__banner;
+    background-color: black;
+    border-top: solid white 1px;
+    text-align: center;
+    width: 100%;
+}
+
+.banner{
+    width: 83%;
+    height: 90%;
+}
+
+.neon{
+	color: #fff;
+	text-shadow:
+		0 0 5px rgba(0,178,255,0.4),
+		0 0 10px rgb(0,178,255,0.4),
+		0 0 20px rgba(0,178,255,0.4),
+		0 0 40px rgb(38, 104, 127,0.4),
+		0 0 80px rgba(38,104,127,0.4),
+		0 0 90px rgba(38,104,127,0.4),
+		0 0 100px rgba(38,104,127,0.4),
+		0 0 140px rgba(38,104,127,0.4),
+		0 0 180px rgba(38,104,127,0.4);
+}
+
+.containerDiscografia__discos{
+    grid-area: containerDiscografia__discos;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.containerDiscografia__discos__listas{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.padding{
+    padding-bottom: 3%;
+}
+
+/*estilos tour*/
+
+.inicioTour{
+    height: 100vh;
+    background:linear-gradient(to top, rgba(37, 37, 37, 0.7),rgb(0, 0, 0, 0.8) ), url(../imagenes/fongo-tour.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedorTour{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "contenedorTour__header"
+    "contenedorTpur__fechas"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+}
+
+.contenedorTour__header{
+    grid-area: contenedorTour__header;
+}
+
+.contenedorTour__fechas{
+    height: 100%;
+    grid-area: contenedorTpur__fechas;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fecha{
+    padding-bottom: 30px;
+    bottom: 0;
+    border-bottom: solid 1px white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.fecha__info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.text{
+    color: white;
+    padding-left: 15px;
+    padding-top: 3%;
+}
+
+.h4{
+    font-size: 1.5rem;
+}
+
+.p{
+    font-family: ;
+}
+
+.boton{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.boton__estilos{
+    width: 70%;
+    height: 60%;
+    border-style: hidden;
+    transition: background-color 1s, color 1s, border-radius 1s, box-shadow 1s;
+}
+
+.boton__estilos:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 10px rgba(202, 2, 2, 0.493), 0 0 10px rgba(84, 55, 247, 0.575);
 }
 
 
-/*pie de pagina*/
+ /*pie de pagina*/
 
 .footer{
     grid-area: footer;
-    text-align: center;
     color: white;
     background-color: black;
-   
+    text-align: center;
+}
+
+.footer__copy{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
