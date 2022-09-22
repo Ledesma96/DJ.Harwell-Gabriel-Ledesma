@@ -6,46 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hardwell</title>
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="bodyContacto">
     <div class="contenedor">
-     <header class="contenedor__header">
+     <header class="contenedor__header hraderUniversal">
          <div class="contenedor__header__img">
-             <img class="contenedor__header__img__logo" src="../imagenes/hardwell-54be62d66f6e3.png" alt="Logo hardwell">
+             <a href="../index.html"><img class="logo animate__animated animate__bounceInRight" src="../imagenes/hardwell-54be62d66f6e3.png" alt="Logo hardwell"></a>
           </div>
-         <nav class="contenedor__header__nav">
-             <a class="contenedor__header__nav__a" href="../index.html">INICIO</a>
-             <a class="contenedor__header__nav__a" href="#">CONTACTO</a>
-             <a class="contenedor__header__nav__a" href="./biografia.html">BIOGRAFIA</a>
-             <a class="contenedor__header__nav__a" href="./dicografia.html">DISCOGRAFIA</a>
-             <a class="contenedor__header__nav__a" href="./tour.html">TOUR</a>
+         <nav class="contenedor__header__nav navegador">
+             <a class=" link animate__animated animate__bounceInRight" href="../index.html">INICIO</a>
+             <a class=" link animate__animated animate__bounceInRight" href="#">CONTACTO</a>
+             <a class=" link animate__animated animate__bounceInRight" href="./biografia.html">BIOGRAFIA</a>
+             <a class=" link animate__animated animate__bounceInRight" href="./dicografia.html">DISCOGRAFIA</a>
+             <a class=" link animate__animated animate__bounceInRight" href="./tour.html">TOUR</a>
          </nav>
      </header>
      <div class="contenedor__contacto">
-        <h1>CONTACTO</h1>
-        <P>Nos interesa tú opinion, que te gustaria ver, sobre que te gustaria que te informemos, porque tú opinion es de gran interés para nosotros, ya que este sitio es oara vos.</P>
-     </div>
+            <h1 class="titulo">CONTACTO</h1>
+            <P class="parrafo">Nos interesa tú opinion, que te gustaria ver, sobre que te gustaria que te informemos, porque tú opinion es de gran interés para nosotros, ya que este sitio es para vos.</P>
+     </div> 
      <main class="contenedor__formulario">
-         <from class="contenedor__formulario__from" action=””> 
-            <div class="contenedor__formulario__from__in">				
-                 <input type=”text” placeholder="Nombre" name=”Nombre” required>
-             </div>
-             <div class="contenedor__formulario__from__in">
-                 <input type="text" placeholder="Apellido" name="Apellido" required> 
-             </div>
-             <div class="contenedor__formulario__from__in">
-                  <input type="email" placeholder="Email" required>
+            <from class="contenedor__formulario__from" action=””> 
+             <div class="contenedor__formulario__from__in">	
+                 <label for="">Nombre</label>	
+                 <input class="transparencia" type=”text” placeholder="Nombre" name=”Nombre” required>
               </div>
-             <div class="contenedor__formulario__from__in">
-                  <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
-             </div>
-             <div class="contenedor__formulario__in">
-                 <input type="submit" value="Enviar">
-             </main>
-      </div>
-      <footer class="footer footerB">
-          <p>&copy derechos reservados</p>
+              <div class="contenedor__formulario__from__in">
+                 <label for="">Apellido</label>
+                 <input class="transparencia" type="text" placeholder="Apellido" name="Apellido" required> 
+              </div>
+              <div class="contenedor__formulario__from__in">
+                 <label for="">Email</label>
+                 <input class="transparencia" type="email" placeholder="Email" required>
+               </div>
+              <div class="contenedor__formulario__from__in">
+                 <label for="">Mensaje</label>
+                 <textarea class="transparencia" name="" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+              </div>
+              <div class="contenedor__formulario__in">
+                  <input class="botonContacto transparencia" type="submit" value="Enviar formulario">
+     </main>
+     <footer class="footer">
+         <p>&copy derechos reservados</p>
      </footer>
-    </div> 
 </body>
 </html>
