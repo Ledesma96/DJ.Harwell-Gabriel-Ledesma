@@ -6,32 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardwell</title>
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="inicioDiscografia">
-    <header class="prncipal">
-        <nav class="principal__nav">
-            <a class="principal__nav__a" href="../index.html">INICIO</a>
-            <a class="principal__nav__a" href="./contacto.html">CONTACTO</a>
-            <a class="principal__nav__a" href="./biografia.html">BIOGRAFIA</a>
-            <a class="principal__nav__a" href="#">DISCOGRAFIA</a>
-            <a class="principal__nav__a" href="./tour.html">TOUR</a>
-        </nav>
-    </header>
-    <section class="discografia">
-        <img class="discografia__banner" src="../imagenes/banner.jpeg" alt="banner artista hardwelll">
-        <div class="discografia__discos" >
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-    </section>
-    <footer>
-        <p>&copy derechos reservados</p>
-    </footer>
-    
+    <div class="containerDiscografia">
+     <header class="containerDiscografia__header hraderUniversal">
+         <div class="containerDiscografia__img">
+            <a href="../index.html"><img class="logo animate__animated animate__bounceInRight" src="../imagenes/hardwell-54be62d66f6e3.png" alt="Logo hardwell"></a>
+         </div>
+         <nav class="principal__nav navegador ">
+             <a class="link animate__animated animate__bounceInRight" href="../index.html">INICIO</a>
+             <a class="link animate__animated animate__bounceInRight" href="./contacto.html">CONTACTO</a>
+             <a class="link animate__animated animate__bounceInRight" href="./biografia.html">BIOGRAFIA</a>
+             <a class="link animate__animated animate__bounceInRight" href="#">DISCOGRAFIA</a>
+             <a class="link animate__animated animate__bounceInRight" href="./tour.html">TOUR</a>
+         </nav>
+     </header>
+     <section class="containerDiscografia__banner">
+        <img class="banner" src="../imagenes/banner.jpg" alt="banner hardwell" >
+     </section>
+     <main class="containerDiscografia__discos">
+         
+         <div class="containerDiscografia__discos__listas" >
+            <h2 class="padding">REBELD NEVER DIE</h2>
+            <p class="padding" >2022</p>
+            <iframe class="padding" style="border-radius:12px" src="https://open.spotify.com/embed/album/5OU4esREA0HLwNekPigYeZ?utm_source=generator" width="80%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+         </div>
+         <div class="containerDiscografia__discos__listas">
+            <h2 class="padding">United We Are</h2>
+            <p class="padding">2015</p>
+            <iframe class="padding" style="border-radius:12px" src="https://open.spotify.com/embed/album/0ZZSo8nObNWR7fTyRZARez?utm_source=generator" width="80%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+         </div>
+         <div class="containerDiscografia__discos__listas">
+            <h2 class="padding">I Am Hardwell</h2>
+            <p class="padding">2013</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2llLG37S5O56zsKAe8Lavo?utm_source=generator" width="80%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+         </div>
+     </main>
+     <footer class="footer">
+         <p>&copy derechos reservados</p>
+     </footer>
+    </div>
 </body>
 </html>
