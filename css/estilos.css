@@ -457,17 +457,15 @@ label{
 }
 
 .imagenes__div__med:hover{
-    width: 430px;
+    width: 450px;
+    -moz-box-shadow: 0px 0px 30px #DF0101; 
+    -webkit-box-shadow: 0px 0px 30px #FF0000; 
+    box-shadow: 0px 0px 30px #DF0101;
 }
 
 .contenedorGaleria{
     grid-area: contenedorGaleria__header;
 }
-
-
-
-
-
 
  /*pie de pagina*/
 
