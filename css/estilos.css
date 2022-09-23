@@ -15,7 +15,7 @@
 }
 
 
-.container{
+.containerInicio{
     height: 120vh;
     width: 100%;
     display:grid ;
@@ -74,7 +74,7 @@
     0 0 180px rgba(38,104,127,1);
 }
 
-.container__importante{
+.containerInicio__importante{
     height: auto;
     color: white;
     display: flex;
@@ -82,7 +82,7 @@
     grid-area: container__importante;
 }
 
-.container__importante__div{
+.containerInicio__importante__div{
     width: 50%;
     height: 100%;
     display:flex ;
@@ -91,11 +91,11 @@
     align-items: center;
 }
 
-.container__importante__div P{
+.containerInicio__importante__div P{
     font-size: 2rem;
 }
 
-.container__importante__div h1{
+.containerInicio__importante__div h1{
     font-size: 3rem;
 }
 
@@ -524,5 +524,16 @@ label{
 
 .sociales__a__logo:hover{
     rotate: 360deg;
+}
+
+/*mediaquery para celular*/
+
+@media  screen and (max-width: 480px) {
+    
+}
+
+/*mediaquery para tablets*/
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
     
 }
