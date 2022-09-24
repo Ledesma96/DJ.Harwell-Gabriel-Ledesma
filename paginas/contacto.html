@@ -5,71 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hardwell</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="bodyContacto">
-    <div class="contenedor">
-     <header class="contenedor__header hraderUniversal">
-         <div>
-             <a href="../index.html"><img class="logo animate__animated animate__bounceInRight" src="../imagenes/hardwell-54be62d66f6e3.png" alt="Logo hardwell"></a>
-          </div>
-         <nav class="navegador">
-             <a class=" link animate__animated animate__bounceInRight" href="../index.html">INICIO</a>
-             <a class=" link animate__animated animate__bounceInRight" href="#">CONTACTO</a>
-             <a class=" link animate__animated animate__bounceInRight" href="./biografia.html">BIOGRAFIA</a>
-             <a class=" link animate__animated animate__bounceInRight" href="./dicografia.html">DISCOGRAFIA</a>
-             <a class="link animate__animated animate__bounceInRight" href="./galeria.html">GALERIA</a>
-             <a class=" link animate__animated animate__bounceInRight" href="./tour.html">TOUR</a>
-         </nav>
+    <div>
+      <header>
+        <nav class="navbar navbar-expand-lg bg-dark nav">
+            <div class="container-fluid div">
+              <div class="divImg">
+               <a class="navbar-brand animate__animated animate__bounceInRight logo" href="../index.html"><img class="logo" src="../imagenes/hardwell-54be62d66f6e3.png" alt="logo"></a>
+             </div>
+              <button class="navbar-toggler button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon span"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active link animate__animated animate__bounceInRight" aria-current="page" href="../index.html">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link animate__animated animate__bounceInRight" href="#">CONTACTO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link animate__animated animate__bounceInRight" href="../paginas/biografia.html">BIOGRAFIA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link animate__animated animate__bounceInRight" href="../paginas/dicografia.html">DISCOGRAFIA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link animate__animated animate__bounceInRight" href="../paginas/galeria.html">GALERIA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link animate__animated animate__bounceInRight" href="../paginas/tour.html">TOUR</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
      </header>
-     <div class="contenedor__contacto">
-            <h1 class="titulo">CONTACTO</h1>
-            <P class="parrafo">Nos interesa tú opinion, que te gustaria ver, sobre que te gustaria que te informemos, porque tú opinion es de gran interés para nosotros, ya que este sitio es para vos.</P>
-     </div> 
-     <main class="contenedor__formulario">
-            <from class="contenedor__formulario__from" action=””> 
-             <div class="contenedor__formulario__from__in">	
-                 <label for="">Nombre</label>	
-                 <input class="transparencia" type=”text” placeholder="Nombre" name=”Nombre” required>
+        <div class=" d-flex flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-xxl-row justify-content-evenly align-items-center divContato">
+            <div class="d-flex flex-column align-items-start justify-content-start col-4 contacto">
+                    <h1 class="titulo">CONTACTO</h1>
+                    <P class="parrafo">Nos interesa tú opinion, que te gustaria ver, sobre que te gustaria que te informemos, porque tú opinion es de gran interés para nosotros, ya que este sitio es para vos.</P>
+            </div> 
+            <main class="contenedor__formulario d-flex flex-column justify-content-center align-items-start ">
+                <from class="contenedor__formulario__from" action=””> 
+                    <div class="contenedor__formulario__from__in d-flex flex-column pt-3">	
+                        <label for="">Nombre</label>	
+                        <input class="transparencia" type=”text” placeholder="Nombre" name=”Nombre” required>
+                    </div>
+                    <div class="contenedor__formulario__from__in d-flex flex-column pt-3">
+                        <label for="">Apellido</label>
+                        <input class="transparencia" type="text" placeholder="Apellido" name="Apellido" required> 
+                    </div>
+                    <div class="contenedor__formulario__from__in d-flex flex-column pt-3">
+                        <label for="">Email</label>
+                       <input class="transparencia" type="email" placeholder="Email" required>
+                     </div>
+                    <div class="contenedor__formulario__from__in d-flex flex-column pt-3">
+                        <label for="">Mensaje</label>
+                        <textarea class="transparencia" name="" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+                    </div>
+                    <div class="contenedor__formulario__in pt-3">
+                        <input class="botonContacto transparencia" type="submit" value="Enviar formulario">
+                    </div>
+            </main>
+        </div>
+        <footer class="d-flex flex-sm-column flex-lg-row justify-content-sm-center align-items-sm-center justify-content-md-between align-items-md-center footer">
+              <div class="d-flex flex-column justify-content-center align-items-start" >
+              <p>pagina creada sin fines de lucro</p>
+              <p>&copy derechos reservados</p>
               </div>
-              <div class="contenedor__formulario__from__in">
-                 <label for="">Apellido</label>
-                 <input class="transparencia" type="text" placeholder="Apellido" name="Apellido" required> 
-              </div>
-              <div class="contenedor__formulario__from__in">
-                 <label for="">Email</label>
-                 <input class="transparencia" type="email" placeholder="Email" required>
+              <div class="d-flex flex-row justify-content-center align-items-center footer__redes">
+                 <div class="sociales">
+                   <a class="sociales__a d-flex justify-content-center align-items-center" href="http://www.facebook.com" target="_blank">
+                     <img class="sociales__a__logo" src="../imagenes/WhatsApp Image 2022-09-23 at 10.08.54.jpeg" alt="">
+                   </a>
                </div>
-              <div class="contenedor__formulario__from__in">
-                 <label for="">Mensaje</label>
-                 <textarea class="transparencia" name="" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
-              </div>
-              <div class="contenedor__formulario__in">
-                  <input class="botonContacto transparencia" type="submit" value="Enviar formulario">
-     </main>
-     <footer class="footer">
-        <div class="footer__copy">
-            <p>pagina creada sin fines de lucro</p>
-            <p>&copy derechos reservados</p>
-         </div>
-         <div class="footer__redes">
-            <div class="sociales">
-                <a class="sociales__a" href="http://www.facebook.com" target="_blank">
-                   <img class="sociales__a__logo" src="../imagenes/WhatsApp Image 2022-09-23 at 10.08.54.jpeg" alt="">
-                </a>
-            </div>
-            <div class="sociales">
-                <a class="sociales__a" href="http://www.instagram.com" target="_blank">
-                   <img class="sociales__a__logo" src="../imagenes/instagram.jpeg" alt="">
-                </a>
-            </div>
-            <div class="sociales">
-                <a class="sociales__a" href="http://www.twitter.com" target="_blank">
+               <div class="sociales">
+                 <a class="sociales__a d-flex justify-content-center align-items-center" href="http://www.instagram.com" target="_blank">
+                    <img class="sociales__a__logo" src="../imagenes/instagram.jpeg" alt="">
+                 </a>
+               </div>
+               <div class="sociales">
+                <a class="sociales__a d-flex justify-content-center align-items-center" href="http://www.twitter.com" target="_blank">
                    <img class="sociales__a__logo" src="../imagenes/twitter.jpeg" width="15%" alt="">
                 </a>
-            </div> 
-        </div>
-    </footer>
+               </div>   
+        </footer>
+    </div>
+   <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

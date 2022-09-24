@@ -14,29 +14,20 @@
     background-size: cover;
 }
 
-
-.containerInicio{
-    height: 120vh;
-    width: 100%;
-    display:grid ;
-    grid-template-areas: 
-    "container__principal"
-    "container__importante"
-    "footer";
-    grid-template-rows: auto 3fr auto;
+.nav{
+    background-color: black;
 }
 
-.hraderUniversal{
+.div{
    background-color: black;
-   width: 100%;
-   border-bottom: solid white 0.5px;
-   grid-area: container__principal;
-   display: flex ;
-   flex-direction: row;
-   justify-content: space-between;
-
 }
+.button{
+    background-color: white;
+ }
 
+ .span{
+    background-color: black;
+ }
 
 .logo{
     width: 15%;
@@ -45,13 +36,6 @@
 
 .logo:hover{
     width: 18%;
-}
-
-.navegador{
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1%;
 }
 
 .link{
@@ -63,42 +47,21 @@
     color: skyblue;
     font-size: 1.3rem;
     text-shadow:
-    0 0 5px rgba(0,178,255,1),
-    0 0 10px rgba(0,178,255,1),
-    0 0 20px rgba(0,178,255,1),
-    0 0 40px rgba(38,104,127,1),
-    0 0 80px rgba(38,104,127,1),
-    0 0 90px rgba(38,104,127,1),
-    0 0 100px rgba(38,104,127,1),
-    0 0 140px rgba(38,104,127,1),
-    0 0 180px rgba(38,104,127,1);
+    0 0 5px rgba(0,178,255,0.25),
+    0 0 10px rgba(0,178,255,0.25),
+    0 0 20px rgba(0,178,255,0.25),
+    0 0 40px rgba(38,104,127,0.25),
+    0 0 80px rgba(38,104,127,0.25),
+    0 0 90px rgba(38,104,127,0.25),
+    0 0 100px rgba(38,104,127,0.25),
+    0 0 140px rgba(38,104,127,0.25),
+    0 0 180px rgba(38,104,127,0.25);
 }
 
-.containerInicio__importante{
-    height: auto;
+.main{
+    height: 90vh;
     color: white;
-    display: flex;
-    justify-content: center;
-    grid-area: container__importante;
 }
-
-.containerInicio__importante__div{
-    width: 50%;
-    height: 100%;
-    display:flex ;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerInicio__importante__div P{
-    font-size: 2rem;
-}
-
-.containerInicio__importante__div h1{
-    font-size: 3rem;
-}
-
 /*estilos contacto*/
 
 .bodyContacto{
@@ -108,41 +71,13 @@
     background-size: cover;
 }
 
-.contenedor{
+.alto{
     height: 100vh;
-    width: 100%;
-    display:grid ;
-    grid-template-areas: 
-    "contenedor__header contenedor__header"
-    "contenedor__contacto contenedor__formulario"
-    "footer footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: auto 40%;
 }
 
 
-.contenedor__header{
-    background-color: black;
-    width: 100%;
-    grid-area: contenedor__header;
-    display: flex ;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.contenedor__header__nav{
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1%;
-}
-
-.contenedor__contacto{
-    height: 100vh;
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start ;
+.contacto{
+    height: 80%;
 }
 
 .titulo{
@@ -162,22 +97,10 @@ label{
 
 .contenedor__formulario{
     height: 100vh;
-    grid-area: contenedor__formulario;
-    
 }
 
 .contenedor__formulario__from{
     height: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.contenedor__formulario__from__in{
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
 .transparencia{
@@ -197,49 +120,13 @@ label{
     background-color: black;
 }
 
-.contenidoBiografia{
-    height: 120vh;
-    width: 100vw;
-    display: grid;
-    grid-template-areas:
-    "contenido__principal contenido__principal"
-    "informacion imagen"
-    "footer footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 50% 50%;
+.caja{
+    width: 45%;
 }
-
-.contenido__principal{
-   background-color: black;
-   width: 100%;
-   grid-area: contenido__principal;
-   display: flex;
-   justify-content: space-between;
-}
-
-.contenido__principal__nav{
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1%;
-}
-
-.contenido__principal__nav__a{
-    color
-}
-
-.informacion{
-    grid-area: informacion;
-}
-
 .lectura{
     font-size: 1rem;
-    color: white;
 }
 
-.bio{
-    color: white;
-}
 
 .masInfo{
     color: rgb(36, 43, 141);
@@ -255,12 +142,6 @@ label{
     align-items: flex-start ;
 }
 
-.imagen{
-    grid-area: imagen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .imagen__har{
     height: 80%;
@@ -270,20 +151,10 @@ label{
 
 .containerDiscografia{
     background-color: black;
-    height: 120vh;
+    /*height: 120vh;*/
     width: 100vw;
-    display: grid;
-    grid-template-areas:
-    "containerDiscografia__header"
-    "containerDiscografia__banner"
-    "containerDiscografia__discos"
-    "footer";
-    grid-template-rows: auto auto auto auto;
 }
- 
-.containerDiscografia__header{
-    grid-area: containerDiscografia__header;
-}
+
 
 .containerDiscografia__banner{
     grid-area: containerDiscografia__banner;
@@ -298,58 +169,14 @@ label{
     height: 90%;
 }
 
-.neon{
-	color: #fff;
-	text-shadow:
-		0 0 5px rgba(0,178,255,0.4),
-		0 0 10px rgb(0,178,255,0.4),
-		0 0 20px rgba(0,178,255,0.4),
-		0 0 40px rgb(38, 104, 127,0.4),
-		0 0 80px rgba(38,104,127,0.4),
-		0 0 90px rgba(38,104,127,0.4),
-		0 0 100px rgba(38,104,127,0.4),
-		0 0 140px rgba(38,104,127,0.4),
-		0 0 180px rgba(38,104,127,0.4);
-}
-
-.containerDiscografia__discos{
-    grid-area: containerDiscografia__discos;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.containerDiscografia__discos__listas{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.padding{
-    padding-bottom: 3%;
-}
 
 /*estilos tour*/
 
 .inicioTour{
-    height: 100vh;
+    height: auto;
     background:linear-gradient(to top, rgba(37, 37, 37, 0.7),rgb(0, 0, 0, 0.8) ), url(../imagenes/fongo-tour.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.contenedorTour{
-    height: 100vh;
-    display: grid;
-    grid-template-areas: 
-    "contenedorTour__header"
-    "contenedorTpur__fechas"
-    "footer";
-    grid-template-rows: auto 1fr auto;
-}
-
-.contenedorTour__header{
-    grid-area: contenedorTour__header;
 }
 
 .contenedorTour__fechas{
@@ -364,16 +191,6 @@ label{
     padding-bottom: 30px;
     bottom: 0;
     border-bottom: solid 1px white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
-}
-
-.fecha__info{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
 .text{
@@ -411,49 +228,24 @@ label{
 /*estilos de galeria*/
 
 .inicioGaleria{
+    height: auto;
     background-color: black;
 }
 
-.contenedorGaleria{
-    width:  100vw;
-    grid-template-areas:
-    "contenedorGaleria__header"
-    "tittle"
-    "imagenes"
-    "footer";
-    grid-template-rows: auto auto auto auto;  
-    border-bottom: solid white 0.5px
-}
-
-.tittle{
-    grid-area: tittle   ;
-    color: white;
-    border-top: solid white 0.5px;
-    text-align: center;
-    padding: 10px;
-}
-
-.imagenes{
-    grid-area: imagenes;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
 
 .imagenes__div{
     border: solid white 0.5px;
-    margin-bottom: 10px;
 }
+
 
 .imagenes__div__med{
     width: 100%;
     border: solid black 0.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    transition: width 0.5s;
+    width: 350px;
+    transition:
+      width 0.5s,
+     -moz-box-shadow 1s,
+     -webkit-box-shadow 0.5s  ;
 }
 
 .imagenes__div__med:hover{
@@ -463,58 +255,37 @@ label{
     box-shadow: 0px 0px 30px #DF0101;
 }
 
-.contenedorGaleria{
-    grid-area: contenedorGaleria__header;
-}
 
  /*pie de pagina*/
 
 .footer{
     height:100px;
-    grid-area: footer;
     color: white;
     background-color: black;
     text-align: center;
     border-top: solid white 0.5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
 .footer__copy{
     height: 100%;
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: flex-start;
+
 }
 
 .footer__redes{
     height: 100%;
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    width: 30%;
 }
 
 .sociales{
     width: 33.3%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .sociales__a{
     position: relative;
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .sociales__a__logo{
@@ -525,15 +296,45 @@ label{
 .sociales__a__logo:hover{
     rotate: 360deg;
 }
-
 /*mediaquery para celular*/
 
-@media  screen and (max-width: 480px) {
-    
+@media screen and (max-width: 480px) {
+    .footer{
+        height: auto;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sociales__a__logo{
+        width: 80%;
+    }
+/*media discografia*/
+    .discos{
+        flex-direction: column;
+        align-items:center ;
+        justify-content: center;  
+    }
+
+    .div{
+        height: 100%;
+        flex-direction: row;
+        justify-content: start;
+        align-items: flex-start
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .divImg{
+        width: 50%;
+    }
+
 }
 
 /*mediaquery para tablets*/
 
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+@media screen (min-width: 481px) and (max-width: 1023px) {
     
 }
