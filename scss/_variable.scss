@@ -1,0 +1,26 @@
+$color-principal: black;
+$color-secundario: white;
+
+$espaciado-normal: 15px;
+$espaciado-chico: 10px;
+$espaciado-grande: 20px;
+
+$espaciado:(
+    normal: $espaciado-normal,
+    chico: $espaciado-chico,
+    grande: $espaciado-grande
+);
+
+$fuentesAlto:(
+    chica: 1rem ,
+    normal: 1.5rem ,
+    grande: 2rem
+);
+
+$alto-completo: 100%;
+$ancho-completo: 100%;
+
+$border-top: solid white 0.5px;
+$border-bottom: solid white 1px;
+
+$centrado: center;

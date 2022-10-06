@@ -1,0 +1,863 @@
+@import "variable";
+@import "mixins";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/*stilos del index*/
+
+.inicioIndex{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../imagenes/fondo.jpg");
+    @include bg-norepeat-cover; 
+}
+
+/*estilos nav */
+.nav{
+    background-color: $color-principal ;
+    .div{
+        background-color: $color-principal;
+        .divImg{
+            .logo{
+              width: ($ancho-completo/2) - 35%;
+              transition: width 0.5s;
+            }
+            .logo:hover{
+                width: ($ancho-completo/2) - 32%;
+            }
+        }
+    }
+     .button{
+        background-color: $color-secundario;
+        .span{
+            background-color: $color-principal;
+         }
+    }
+    .link{
+        color: $color-secundario;
+        transition: color 0.5s, font-size 0.5s ;   
+       
+    }
+    .link:hover{
+        color: skyblue;
+        font-size: map-get($fuentesAlto, normal);
+        text-shadow:
+        0 0 5px rgba(0,178,255,0.25),
+        0 0 10px rgba(0,178,255,0.25),
+        0 0 20px rgba(0,178,255,0.25),
+        0 0 40px rgba(38,104,127,0.25),
+        0 0 80px rgba(38,104,127,0.25),
+        0 0 90px rgba(38,104,127,0.25),
+        0 0 100px rgba(38,104,127,0.25),
+        0 0 140px rgba(38,104,127,0.25),
+        0 0 180px rgba(38,104,127,0.25);
+    }
+}
+.main{
+    height: 90vh;
+    color: $color-secundario;
+    @include flex-column-center;
+    .main__div{
+       
+        .vivi{
+            font-size: map-get($fuentesAlto , grande );
+            font-weight: bold;
+            @include flex-center-center;
+            text-shadow: 0 0 10px rgba(189, 8, 8, 0.6), 0 0 10px rgba(197, 25, 68, 0.575);
+        }
+        .hardwell{
+            @include flex-center-center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(189, 8, 8, 0.6), 0 0 10px rgba(197, 25, 68, 0.575);
+        }
+    } 
+}
+/*estilos contacto*/
+.bodyContacto{
+    height: 100vh;
+    background-image: url(../imagenes/consola.jpg);
+    @include bg-norepeat-cover;
+    .contenedor{
+        height: $alto-completo;
+        width: $ancho-completo;
+        display:grid ;
+        grid-template-areas: 
+        "header header"
+        "contenedor__contacto contenedor__formulario"
+        "footer footer";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: auto 40%;
+        .contenedor__header{
+            grid-area: header; 
+        }
+        .contenedor__contacto{
+            height: 100vh;
+            padding: 10%;
+            grid-area: contenedor__contacto;
+            @include flex-column-start;
+            .titulo{
+                color: $color-secundario;
+                font-size: 3em;
+                padding-bottom: map-get($espaciado , grande );
+            }
+            .parrafo{
+                color: $color-secundario;
+                font-size: map-get($fuentesAlto, normal);
+            }
+        }
+        .contenedor__formulario{
+            height: 100vh;
+            grid-area: contenedor__formulario;
+            .contenedor__formulario__from{
+                @include flex-column-start-center;
+                height: $ancho-completo - 5%;
+                .contenedor__formulario__from__in{
+                 padding-bottom: map-get($espaciado , grande );
+                 @include flex-column;
+                 .label{
+                      color: $color-secundario;
+                     }
+                 .transparencia{
+                     color: $color-secundario;
+                     background-color: $color-principal;
+                     opacity:0.5;
+                    }
+                 .botonContacto{
+                        border-radius: 5px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+/*estilos biografia*/
+
+.inicioBiografia{
+    height: 100vh;
+    width: 100vw;
+    background-color: $color-principal;
+    .contenidoBiografia{
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "informacion imagen"
+        "footer footer";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 50% 50%;
+        .header{
+         grid-area: header;
+        }   
+        .informacion{
+            grid-area: informacion;
+            .informacion__bio{
+                height: $alto-completo - 5%;
+                padding: 10%;
+                @include flex-column-start;
+                .lectura{
+                    font-size: 1rem;
+                    color: $color-secundario;
+                }
+                .bio{
+                    color: $color-secundario;
+                }
+                .masInfo{
+                    color: rgb(49, 61, 221);
+                    text-decoration:underline;
+                    padding-top: 1%;
+                }
+                
+            }
+        }
+        .imagen{
+            grid-area: imagen;
+            @include flex-center-center;
+            .imagen__har{
+                height: $alto-completo - 20%;
+            }
+        }
+    }
+}
+ /*estilos discografia*/
+ 
+ .containerDiscografia{
+     background-color: $color-principal;
+     width: 100vw;
+     display: grid;
+     grid-template-areas:
+     "header"
+     "containerDiscografia__banner"
+     "containerDiscografia__discos"
+     "footer";
+     grid-template-rows: auto auto auto auto;
+     .containerDiscografia__header{
+         grid-area:header;
+    }
+    .containerDiscografia__banner{
+        grid-area: containerDiscografia__banner;
+        border-top: $border-top;
+        text-align: $centrado;
+        width: 100%;
+        .banner{
+            width: $ancho-completo - 17%;
+            height: $alto-completo - 10%;
+        }
+    }
+    .containerDiscografia__discos{
+         grid-area: containerDiscografia__discos;
+         @include flex-row-evenly-center;
+         .containerDiscografia__discos__listas{
+             color: $color-secundario;
+             @include flex-column-start;
+             .padding{
+                 padding-bottom: 3%;
+                }
+            }
+        }
+ }
+
+/*estilos tour*/
+
+.inicioTour{
+    background-image:linear-gradient(to top, rgba(37, 37, 37, 0.7),rgba(0, 0, 0, 0.7) ), url(../imagenes/fongo-tour.jpg) ;
+    @include bg-norepeat-cover;
+    .contenedorTour{
+     display: grid;
+     grid-template-areas: 
+     "header"
+     "contenedorTour__fechas"
+     "footer";
+     grid-template-rows: auto 1fr auto;
+     .header{
+         grid-area:header;
+        }
+    }
+    .contenedorTour__fechas{
+        height: $alto-completo;
+        padding-top:map-get($espaciado , grande );
+        padding-bottom: map-get($espaciado , grande );
+        grid-area: contenedorTour__fechas;
+        @include flex-column-center;
+        .fecha{
+            width: $ancho-completo;
+            padding-top: map-get($espaciado , grande );
+            padding-bottom: map-get($espaciado , grande );
+            border-bottom: $border-bottom;
+            @include flex-row-between-center;
+            .fecha__info{
+             @include flex-row-evenly-center;
+             .text{
+                 color: $color-secundario;
+                 padding-left: map-get($espaciado , normal );
+                 padding-top: 3%;
+                }
+             .h4{
+                    font-size: map-get($fuentesAlto, normal);
+                }
+            }
+            .boton{
+                height: $alto-completo;
+                width: 15%;
+                @include flex-evenly-end;
+                .boton__estilos{
+                    width: $ancho-completo - 30%;
+                    height: $alto-completo - 40%;
+                    border-style: hidden;
+                    transition: background-color 1s, color 1s, border-radius 1s, box-shadow 1s;
+                }
+                .boton__estilos:hover{
+                    background-color: $color-principal;
+                    color: $color-secundario;
+                    box-shadow: 0 0 10px rgba(202, 2, 2, 0.493), 0 0 10px rgba(84, 55, 247, 0.575);
+                }
+            }
+        }
+    }
+}
+/*estilos de galeria*/
+
+.inicioGaleria{
+    height: auto;
+    background-color: $color-principal;
+    .contenedorGaleria{
+        .galeria{
+            width: $alto-completo;
+            padding: $espaciado-chico - 10px;
+            text-align: $centrado;
+            color: $color-secundario;
+            border-top: $border-top;
+            border-bottom: $border-bottom;
+        }
+        .imagenes{
+            @include flex-center-center;
+            flex-wrap: wrap;
+            .imagenes__div{
+                @include border-standar;
+                margin: map-get($espaciado , grande );
+                .imagenes__div__med{
+                    width: $ancho-completo;
+                    @include border-standar;
+                    width: 350px;
+                    transition:
+                      width 0.5s,
+                     -moz-box-shadow 1s,
+                     -webkit-box-shadow 0.5s  ;
+                }
+                .imagenes__div__med:hover{
+                    width: 450px;
+                    -moz-box-shadow: 0px 0px 30px #DF0101; 
+                    -webkit-box-shadow: 0px 0px 30px #FF0000; 
+                    box-shadow: 0px 0px 30px #DF0101;
+                }
+            }
+        }
+    }
+}
+ /*pie de pagina*/
+
+.footer{
+    height:100px;
+    color: $color-secundario;
+    background-color: $color-principal;
+    text-align: $centrado;
+    border-top: $border-top;
+    grid-area: footer;
+    @include flex-row-between-center;
+    .footer__copy{
+        height: $alto-completo;
+        width: $ancho-completo/2;
+        @include flex-column-center;
+    }
+    .footer__redes{
+        height: $alto-completo;
+        width: ($ancho-completo/2) - 20%;
+        @include flex-center-center;
+        .sociales{
+         width: $ancho-completo/3;
+         height: $alto-completo;
+         .sociales__a{
+             position: relative;
+             height: $alto-completo;
+             width: $ancho-completo;
+             @include flex-center-center;
+             .sociales__a__logo{
+                 width: $ancho-completo - 70%;
+                 transition: rotate 0.5s;
+                }
+            }
+        }
+    }
+}
+.sociales__a__logo:hover{
+    rotate: 360deg;
+}
+/*mediaquery para celular*/
+
+@media screen and (max-width: 480px) {
+    /*media header*/
+    .nav{
+        .div{
+            display: flex;
+            flex-direction:row-reverse ;
+            justify-content: space-between;
+            .divImg{
+             width: $ancho-completo - 20%;
+             @include flex-center-center;
+             .logo{
+                  width: $ancho-completo - 40%;
+                }
+            }
+        }
+    }
+    /*media footer*/
+    .footer{
+        height: auto;
+        @include flex-column-center;
+        .footer__copy{
+            width: $ancho-completo;
+        }
+        .footer__redes{
+            .sociales{
+                .sociales__a{
+                    .sociales__a__logo{
+                        width: $ancho-completo - 20%;
+                    }                
+                }
+            }
+        }
+    }
+/*media index*/
+    .inicioIndex{
+        background-image:none;
+        background-color: black;
+    }
+/*media discografia*/
+    .containerDiscografia{
+        .containerDiscografia__discos{
+            width: $ancho-completo;
+            @include flex-column-center; 
+            .containerDiscografia__discos__listas{
+                padding-top: map-get($espaciado , grande );
+                padding-bottom: map-get($espaciado , grande );
+                @include flex-center-center;
+                .padding{
+                    padding: 0;
+                }
+            }
+        }
+    }
+    
+/*media contacto*/
+
+    .bodyContacto{
+        width: auto;
+        background-color: $color-principal;
+        background-image: none;
+        .contenedor{
+            width: $ancho-completo;
+            grid-template-areas: 
+             "header"
+             "contenedor__contacto"
+             "contenedor__formulario"
+             "footer";
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 100%;
+            .header{
+                grid-area: header;
+            }
+            .contenedor__contacto{
+                height: auto;
+                width: auto;
+                grid-area: contenedor__contacto;
+                @include flex-column-center;
+                .titulo{
+                    text-align: $centrado;
+                    font-size: map-get($fuentesAlto, chica);
+                }
+                .parrafo{
+                    text-align: $centrado;
+                    font-size: map-get($fuentesAlto, chica);
+                }
+            }
+            .contenedor__formulario{
+                height: auto;
+                width: auto;
+                padding-bottom: map-get($espaciado , grande );
+                grid-area: contenedor__formulario;
+                @include flex-center-center;
+            }
+            .footer{
+                grid-area: footer;
+            }
+        }
+    }
+    /*media biografia*/
+    .inicioBiografia{
+        .contenidoBiografia{
+            grid-template-areas:
+            "header"
+            "imagen"
+            "informacion"
+            "footer";
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 100%;
+            .header{
+                grid-area: header;
+            }
+            .imagen{
+                grid-area: imagen;
+                width: $ancho-completo;
+                .imagen__har{
+                    width: $ancho-completo - 10%;
+                    height: auto;
+                }
+            }
+            .informacion{
+                grid-area: informacion;
+                .informacion__bio{
+                   @include flex-center-center
+                }
+            }
+            .footer{
+                grid-area: footer;
+            }
+        }
+
+    }
+    /*media tour*/
+
+    .inicioTour{
+        background-image: none;
+        background-color: $color-principal;
+        .contenedorTour{
+            grid-template-areas:
+            "header"
+            "contenedorTour__fechas"
+            "footer";
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 100%;
+            .header{
+                grid-area: header;
+            }
+            .contenedorTour__fechas{
+                grid-area: contenedorTour__fechas;
+                .fecha{
+                    width: $ancho-completo;
+                    height: $alto-completo;
+                    @include flex-column-center;
+                    .fecha__info{
+                        width: $ancho-completo;
+                        height: $alto-completo - 30%;
+                        @include flex-column-center
+                    }
+                    .boton{
+                        width: $ancho-completo;
+                        height: $alto-completo - 70%;
+                        .boton__estilos{
+                            width: $ancho-completo - 5%;
+                        }
+                    }
+                }
+            }
+            .footer{
+                grid-area: footer;
+            }
+        }
+    }
+}
+
+/*mediaquery para tablets*/
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+     /*media header*/
+    .nav{
+        .div{
+            display: flex;
+            flex-direction:row-reverse ;
+            justify-content: space-between;
+            .divImg{
+                width: $ancho-completo - 15%;
+                @include flex-center-center;
+                .logo{
+                    width: $ancho-completo - 40%;
+                }
+            }
+        }
+    }
+/*media index*/
+    .inicioIndex{
+        background-image:none;
+        background-color: black;
+    }
+
+    /*media footer*/
+    .footer{
+        height: auto;
+        @include flex-column-center;
+        .footer__copy{
+            width: $ancho-completo;
+        }
+        .footer__redes{
+            .sociales{
+                .sociales__a{
+                    .sociales__a__logo{
+                     width: $ancho-completo - 20%;
+                    }
+                }
+            }
+        }
+    }
+/*media discografia*/
+    .containerDiscografia{
+        .containerDiscografia__discos{
+            width: 100%;
+            @include flex-column-center;
+            .containerDiscografia__discos__listas{
+                padding-top: map-get($espaciado , grande );
+                padding-bottom: map-get($espaciado , grande );
+                @include flex-center-center;
+                .padding{
+                    padding: 0;
+                }
+            } 
+        }
+    }
+/*media contacto*/
+
+    .bodyContacto{
+        width: auto;
+        background-color: $color-principal;
+        background-image: none;
+        .contenedor{
+            width: $ancho-completo;
+            grid-template-areas: 
+             "header"
+             "contenedor__contacto"
+             "contenedor__formulario"
+             "footer";
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 100%;
+            .header{
+                grid-area: header;
+            }
+            .contenedor__contacto{
+                height: auto;
+                width: auto;
+                grid-area: contenedor__contacto;
+                @include flex-column-center;
+                .titulo{
+                    text-align: center;
+                    font-size: map-get($fuentesAlto, normal);
+                }
+                .parrafo{
+                    text-align: center;
+                    font-size:map-get($fuentesAlto, chica);
+                }
+            }
+            .contenedor__formulario{
+                height: auto;
+                width: auto;
+                padding-bottom: map-get($espaciado , grande );
+                grid-area: contenedor__formulario;
+                @include flex-center-center
+            }
+            .footer{
+                grid-area: footer;
+            }
+        }
+    }
+    /*media biografia*/
+
+    .inicioBiografia{
+        .contenidoBiografia{
+            grid-template-areas:
+            "header"
+            "imagen"
+            "informacion"
+            "footer";
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 100%;
+            .header{
+                grid-area: header;
+            }
+            .imagen{
+                grid-area: imagen;
+                width: 100%;
+                .imagen__har{
+                    width: $alto-completo - 10%;
+                    height: auto;
+                }
+            }
+            .informacion{
+                grid-area: informacion;
+                .informacion__bio{
+                    @include flex-center-center
+                }
+            
+            }
+            .footer{
+                grid-area: footer;
+            }
+        }
+
+    }
+    /*media tour*/
+
+    .inicioTour{
+        background-image: none;
+        background-color: $color-principal;
+        .contenedorTour{
+            grid-template-areas:
+            "header"
+            "contenedorTour__fechas"
+            "footer";
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 100%;
+            .header{
+                grid-area: header;
+            }
+            .contenedorTour__fechas{
+                grid-area: contenedorTour__fechas;
+                .fecha{
+                    width: $ancho-completo;
+                    height: $alto-completo;
+                    @include flex-column-center;
+                    .fecha__info{
+                        width:$ancho-completo;
+                        height: $alto-completo - 10%;
+                        @include flex-column-center
+                    }
+                    .boton{
+                        width: $ancho-completo;
+                        height: $alto-completo - 70%;
+                        .boton__estilos{
+                            width: $ancho-completo - 5%;
+                        }
+                    }
+                }
+            }
+            .footer{
+                grid-area: footer;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px ) and (max-width: 1023px){
+       /*media header*/
+    .nav{
+        .div{
+            width: $ancho-completo;
+            display: flex;
+            flex-direction:row-reverse ;
+            justify-content: space-between;
+            .divImg{
+                width: $ancho-completo/2;
+                display: flex;
+                justify-content: flex-end;
+                .logo{
+                    width: $ancho-completo - 40%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+       
+    /*media index*/
+
+    .inicioIndex{
+        background-image: none;
+        background-color: $color-principal;
+    }
+
+    /*media contacto*/
+
+    .bodyContacto{
+        height: 100vh;
+        .contenedor{
+            .contenedor__contacto{
+                height: auto;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+            .contenedor__formulario{
+                height: auto;
+                .contenedor__formulario__from{
+                    height: auto;
+                    padding-top: 20%;
+                }    
+            }
+        }
+    }
+     /*media biografia*/
+    .inicioBiografia{
+        .contenidoBiografia{
+            grid-template-areas:
+            "header"
+            "imagen"
+            "informacion"
+            "footer";
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 100%;
+            .header{
+                grid-area: header;
+            }
+            .imagen{
+                grid-area: imagen;
+                width: $ancho-completo;
+                .imagen__har{
+                    width: $ancho-completo - 20%;
+                    height: auto;
+                }
+            }
+            .informacion{
+                grid-area: informacion;
+                .informacion__bio{
+                    @include flex-center-center
+                }
+            }
+            .footer{
+                grid-area: footer;
+            }
+        }
+    }
+    /*media discografia*/
+    
+    .inicioDiscografia{
+        height: 100vh;
+        .containerDiscografia{
+            height: $alto-completo;
+            grid-template-areas:
+            "header"
+            "containerDiscografia__banner"
+            "containerDiscografia__discos"
+            "footer";
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: auto;
+            .header{
+                grid-area: header;
+            }
+            .containerDiscografia__banner{
+                grid-area: containerDiscografia__banner
+            }
+            .containerDiscografia__discos{
+                grid-area: containerDiscografia__discos;
+                @include flex-center-center;
+                .containerDiscografia__discos__listas{
+                    padding-left: 40px;
+                    .fuente{
+                        font-size: map-get($fuentesAlto, normal);
+                        font-weight:bold;
+                    }
+                }
+            }
+            .footer{
+                grid-area: footer;
+            }
+        }
+    }
+    /*media galeria*/
+
+    .imagenes__div__med{
+        width: 280px;
+    }
+
+    /*media tour*/
+
+    .inicioTour{
+        height: 100vh;
+        background-image: none;
+        background-color: $color-principal;
+        .contenedorTour{
+            height: $alto-completo;
+            .contenedorTour__fechas{
+                height: $alto-completo;
+                .fecha{
+                    width: $ancho-completo;
+                    height: $alto-completo - 80%;
+                    @include flex-column-center;
+                    .fecha__info{
+                        width: $ancho-completo;
+                        height: $alto-completo/2;
+                        justify-content: flex-start;
+                        align-items: flex-end;
+                    }
+                    .boton{
+                        width: $ancho-completo;
+                        height: $alto-completo/2;
+                        .boton__estilos{
+                            width: $ancho-completo - 5%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

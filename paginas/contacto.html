@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hardwell</title>
+    <meta name="keywords" content="hardwell, DJ, Electronica, Festival, Tomorrowland, Ultra, revealed">
+    <meta name="description" content="contactanos y contanos sobre vos y que es lo que te gustaria ver">
+    <title>hardwell-Contactotanos</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut ico" href="../favicon.ico"  type="image/x-icon">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="bodyContacto">
-    <div>
-      <header>
+    <div class="contenedor">
+      <header class="contenedor__header">
         <nav class="navbar navbar-expand-lg bg-dark nav">
             <div class="container-fluid div">
               <div class="divImg">
@@ -45,56 +49,54 @@
             </div>
           </nav>
      </header>
-        <div class=" d-flex flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-xxl-row justify-content-evenly align-items-center divContato">
-            <div class="d-flex flex-column align-items-start justify-content-start col-4 contacto">
-                    <h1 class="titulo">CONTACTO</h1>
-                    <P class="parrafo">Nos interesa tú opinion, que te gustaria ver, sobre que te gustaria que te informemos, porque tú opinion es de gran interés para nosotros, ya que este sitio es para vos.</P>
-            </div> 
-            <main class="contenedor__formulario d-flex flex-column justify-content-center align-items-start ">
-                <from class="contenedor__formulario__from" action=””> 
-                    <div class="contenedor__formulario__from__in d-flex flex-column pt-3">	
-                        <label for="">Nombre</label>	
-                        <input class="transparencia" type=”text” placeholder="Nombre" name=”Nombre” required>
-                    </div>
-                    <div class="contenedor__formulario__from__in d-flex flex-column pt-3">
-                        <label for="">Apellido</label>
-                        <input class="transparencia" type="text" placeholder="Apellido" name="Apellido" required> 
-                    </div>
-                    <div class="contenedor__formulario__from__in d-flex flex-column pt-3">
-                        <label for="">Email</label>
-                       <input class="transparencia" type="email" placeholder="Email" required>
-                     </div>
-                    <div class="contenedor__formulario__from__in d-flex flex-column pt-3">
-                        <label for="">Mensaje</label>
-                        <textarea class="transparencia" name="" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
-                    </div>
-                    <div class="contenedor__formulario__in pt-3">
-                        <input class="botonContacto transparencia" type="submit" value="Enviar formulario">
-                    </div>
-            </main>
+     <div class="contenedor__contacto">
+       <h1 class="titulo">CONTACTO</h1>
+       <P class="parrafo">Nos interesa tú opinión, que te gustaría ver, sobre que te gustaría que te informemos, porque tú opinión es de gran interés para nosotros, ya que este sitio es para vos.</P>
+     </div> 
+     <main class="contenedor__formulario">
+       <from class="contenedor__formulario__from" action=””> 
+         <div class="contenedor__formulario__from__in">	
+           <label class="label" for="">Nombre</label>	
+           <input class="transparencia" type=”text” placeholder="Nombre" name=”Nombre” required>
+         </div>
+         <div class="contenedor__formulario__from__in">
+           <label class="label" for="">Apellido</label>
+           <input class="transparencia" type="text" placeholder="Apellido" name="Apellido" required> 
+         </div>
+         <div class="contenedor__formulario__from__in">
+           <label class="label" for="">Email</label>
+           <input class="transparencia" type="email" placeholder="Email" required>
+         </div>
+         <div class="contenedor__formulario__from__in">
+           <label class="label" for="">Mensaje</label>
+           <textarea class="transparencia" name="" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+         </div>
+         <div class="contenedor__formulario__from__in">
+            <input class="botonContacto transparencia" type="submit" value="Enviar formulario">
+     </main>
+      <footer class="footer">
+        <div class="footer__copy" >
+             <p>pagina creada sin fines de lucro</p>
+             <p>&copy derechos reservados</p>
         </div>
-        <footer class="d-flex flex-sm-column flex-lg-row justify-content-sm-center align-items-sm-center justify-content-md-between align-items-md-center footer">
-              <div class="d-flex flex-column justify-content-center align-items-start" >
-              <p>pagina creada sin fines de lucro</p>
-              <p>&copy derechos reservados</p>
-              </div>
-              <div class="d-flex flex-row justify-content-center align-items-center footer__redes">
-                 <div class="sociales">
-                   <a class="sociales__a d-flex justify-content-center align-items-center" href="http://www.facebook.com" target="_blank">
-                     <img class="sociales__a__logo" src="../imagenes/WhatsApp Image 2022-09-23 at 10.08.54.jpeg" alt="">
-                   </a>
-               </div>
-               <div class="sociales">
-                 <a class="sociales__a d-flex justify-content-center align-items-center" href="http://www.instagram.com" target="_blank">
-                    <img class="sociales__a__logo" src="../imagenes/instagram.jpeg" alt="">
-                 </a>
-               </div>
-               <div class="sociales">
-                <a class="sociales__a d-flex justify-content-center align-items-center" href="http://www.twitter.com" target="_blank">
-                   <img class="sociales__a__logo" src="../imagenes/twitter.jpeg" width="15%" alt="">
-                </a>
-               </div>   
-        </footer>
+        <div class="footer__redes">
+          <div class="sociales">
+            <a class="sociales__a" href="http://www.facebook.com" target="_blank">
+              <img class="sociales__a__logo" src="../imagenes/WhatsApp Image 2022-09-23 at 10.08.54.jpeg" alt="">
+            </a>
+          </div>
+          <div class="sociales">
+              <a class="sociales__a" href="http://www.instagram.com" target="_blank">
+                <img class="sociales__a__logo" src="../imagenes/instagram.jpeg" alt="">
+              </a>
+          </div>
+          <div class="sociales  ">
+            <a class="sociales__a" href="http://www.twitter.com" target="_blank">
+              <img class="sociales__a__logo" src="../imagenes/twitter.jpeg" width="15%" alt="">
+            </a>
+          </div> 
+        </div>
+      </footer>
     </div>
    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
